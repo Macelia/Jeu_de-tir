@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Y1NDZiYXRjaDMtbXludC0zMS1iYWRnZXdhdGVyY29sb3JfMS5qcGc.jpg');
+    background-size: cover;
+}
+.game_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+.container{
+    height: 400px;
+    width: 500px;
+    border: 1px solid #999;
+    cursor: crosshair;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+#target{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    transition: 0.25s;
+    animation: animateTarget 18s infinite;
+}
+
+button{
+   padding: 10px 20px; 
+   margin-bottom: 20px;
+   background-color: green;
+   border: 0;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+@keyframes animateTarget {
+    to{
+        transform: translateY(200px) rotate(90deg);
+    }
+}
