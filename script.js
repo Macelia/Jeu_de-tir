@@ -5,7 +5,7 @@ let timeconatiner=document.querySelector(".time");
 
 btn.onclick=function(){
     let score=0;
-    let time=0;
+    let time=10;
     container.innerHTML="";
     let interval = setInterval(
         function  showTarget() {
@@ -16,7 +16,7 @@ btn.onclick=function(){
             target.scr="silly.png";
             container.appendChild(target);
             target.style.top = Math.random() * (500 - target.offsetHeight) +'px';
-            target.style.left = Math.random() * (500 - target.offsetHeight) +'px';
+            target.style.left = Math.random() * (500 - target.offsetWidth) +'px';
             
             // faire disparaitre la cible
             setInterval(() => {
@@ -24,16 +24,17 @@ btn.onclick=function(){
             }, 2000);
 
             // quand on clique sur target
-            target.onclick=function(){score += 1;
+            target.onclick=function(){
+                score += 1;
                 target.style.display='none';
             }
             time -=1;
 
             // afficher les infos 
             scoreconatiner.innerHTML=`Score : ${score}`
-            timeconatiner.innerHTML=`Score : ${time}`
+            timeconatiner.innerHTML=`Time : ${time}`
 
-            // la fin du jeu le tempsp est écoulé
+            // la fin du jeu le temps est écoulé
 
             if( time==0){
                 clearInterval(interval);

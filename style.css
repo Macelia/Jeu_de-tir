@@ -28,21 +28,22 @@ body {
     justify-content: center;
     position: relative;
     background-color: #fff;
+    box-shadow: 10px 10px 5px rgba(168, 43, 43, 0.4);
     border-radius: 6px;
-    overflow: hidden;
+    overflow: hidden;/* rien ne va sortir du container */
 }
 #target{
     height: 60px;
     width: 60px;
     position: absolute;
     transition: 0.25s;
-    animation: animateTarget 18s infinite;
+    animation: animateTarget 10s infinite;
 }
 
 button{
    padding: 10px 20px; 
    margin-bottom: 20px;
-   background-color: green;
+   background-color: rgba(168, 43, 43, 0.4);
    border: 0;
     color: #fff;
     border-radius: 6px;
